@@ -14,7 +14,7 @@
         duration = 30;
         break;
       case "fast":
-        duration = 1;
+        duration = 0.5;
         break;
       case "finish":
         flag = true;
