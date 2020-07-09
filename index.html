@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>make-egg</title>
+    <link rel="stylesheet" href="style.css" />
+    <style id="styleTag"></style>
+  </head>
+  <body>
+    <!-- 展示代码部分 -->
+    <div class="code-wrapper">
+      <pre id="code"></pre>
+    </div>
+    <!-- 预览效果部分 -->
+    <div class="perview-wrapper">
+      <div class="container">
+        <div class="egg">
+          <!-- 突出的蛋白部分 -->
+          <div class="eggLeft"></div>
+          <div class="eggRight"></div>
+          <!-- 蛋黄 -->
+          <div class="yolk">
+            <!-- 蛋蛋的眼睛 -->
+            <div class="eyes"></div>
+            <!-- 蛋蛋的微笑 -->
+            <div class="smile"></div>
+            <!-- 蛋蛋的脸部 -->
+            <div class="cheeks"></div>
+            <!-- 蛋蛋眨眼睛 -->
+            <div class="shine"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button data-speed="slow">慢速</button>
+      <button data-speed="normal" class="active">中速</button>
+      <button data-speed="fast">快速</button>
+      <button data-speed="finish">中断</button>
+    </div>
+
+    <!-- jquery文件必须写在js文件之前,否则会报错!! -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- 引入当前目录下的main.js文件 -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

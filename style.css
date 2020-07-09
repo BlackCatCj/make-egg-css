@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 之前插入 */
+*::before {
+  box-sizing: border-box;
+}
+/* 之后插入 */
+*::after {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* 竖着排列 */
+  flex-direction: column;
+  /* 因为动画会进行放大，导致滚动条反复弹出，设置为隐藏滚动条 */
+  overflow: hidden;
+}
+
+.code-wrapper {
+  flex: 1;
+  height: 50%;
+  padding: 10px;
+  border: 2px solid red;
+}
+.perview-wrapper {
+  flex: 1;
+  height: 50%;
+  border: 2px solid red;
+}
+#code {
+  overflow: hidden;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  /* 
+  -moz-box       Firefox 
+  -webkit-box   Safari and Chrome 
+  -ms-flexbox   Internet Explorer 10 
+  */
+  /* 兼容IE10 */
+  display: -ms-flexbox;
+  /* 把整个蛋位置居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+}
+.actions {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions > button {
+  /* 按钮美化 */
+  width: 100px; /* 宽度 */
+  height: 40px; /* 高度 */
+  margin: 10px;
+  border-width: 0px; /* 边框宽度 */
+  border-radius: 20px; /* 边框半径 */
+  background: #1e90ff; /* 背景颜色 */
+  cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+  outline: none; /* 不显示轮廓线 */
+  font-family: Microsoft YaHei; /* 设置字体 */
+  color: white; /* 字体颜色 */
+  font-size: 15px; /* 字体大小 */
+}
+.actions > button:hover {
+  /* 鼠标移入按钮范围时改变颜色 */
+  background: #5599ff;
+}
+
+.actions > button.active {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
