@@ -52,7 +52,7 @@
       }
     }, duration);
   }
-
+  // 这段代码就是要动态展示的过程
   let code = `
     /* 现在开始制作egg */
     .container{
